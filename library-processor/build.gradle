@@ -13,3 +13,7 @@ sourceSets {
         java.srcDirs += "${project.rootDir}${sep}library-annotations${sep}src${sep}main${sep}java"
     }
 }
+
+if (project.hasProperty('NEXUS_USERNAME')) {
+    apply from: '../java-publishing-maven.gradle'
+}
